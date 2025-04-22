@@ -11,6 +11,11 @@ import Landing_Page from './Components/Landing_Page/Landing_Page';
 import Login from './Components/Login/Login';
 import InstantConsultation from './Components/InstantConsultation/InstantConsultation';
 import FindDoctorSearch from './Components/FindDoctorSearch/FindDoctorSearch';
+import FindDoctorSearchIC from './Components/InstantConsultation/FindDoctorSearchIC/FindDoctorSearchIC.js';
+import AppointmentForm from './Components/AppointmentForm/AppointmentForm';
+import AppointmentFormIC from './Components/InstantConsultation/AppointmentFormIC/AppointmentFormIC';
+import DoctorCard from './Components/DoctorCard/DoctorCard';
+import DoctorCardIC from './Components/InstantConsultation/DoctorCardIC/DoctorCardIC';
 
 // Function component for the main App
 function App() {
@@ -25,11 +30,19 @@ function App() {
 
           {/* Set up the Routes for different pages */}
           <Routes>
-            <Route path="/" element={<Landing_Page/>}/>
+          <Route path="/" element={<Landing_Page/>}/>
             <Route path="/Login" element={<Login/>}/>
             <Route path="/SignUp" element={<Sign_Up/>}/>
             <Route path="/Search/Doctors" element={<FindDoctorSearch/>}/>
             <Route path="/instant-consultation" element={<InstantConsultation />} />
+            <Route path="/FindDoctorSearchIC" element={<FindDoctorSearchIC />} /> 
+            <Route path="/AppointmentFormIC" element={<AppointmentFormIC />} /> 
+            <Route path="/AppointmentForm" element={<AppointmentForm />} /> 
+            <Route path="/DoctorCardIC" element={<DoctorCardIC />} /> 
+            <Route path="/DoctorCard" element={<DoctorCard />} /> 
+
+
+
 
             {/* Define individual Route components for different pages */}
           </Routes>
