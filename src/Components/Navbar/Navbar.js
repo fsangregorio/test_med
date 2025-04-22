@@ -43,7 +43,7 @@ const Navbar = () => {
 
   const reportsPage = () => {
     navigate("/reports");
-  };
+  }; 
 
   useEffect(() => {
     const storedName = sessionStorage.getItem("name");
@@ -108,7 +108,7 @@ const Navbar = () => {
         ) : (
           <>
             <li className="link">
-              <Link to="/signup">
+              <Link to="/Sign_Up">
                 <button className="navBtn">Sign Up</button>
               </Link>
             </li>
