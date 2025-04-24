@@ -34,7 +34,7 @@ function App() {
             <Route path="/Login" element={<Login/>}/>
             <Route path="/Sign_Up" element={<Sign_Up/>}/>
             <Route path="/Search/Doctors" element={<FindDoctorSearch/>}/>
-            <Route path="/instant-consultation" element={<InstantConsultation />} />
+            <Route path="/InstantConsultation" element={<InstantConsultation />} />
             <Route path="/FindDoctorSearchIC" element={<FindDoctorSearchIC />} /> 
             <Route path="/AppointmentFormIC" element={<AppointmentFormIC />} /> 
             <Route path="/AppointmentForm" element={<AppointmentForm />} /> 
