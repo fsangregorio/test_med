@@ -38,7 +38,7 @@ const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
             type="date"
             id="date"
             value={date}
-            onChange={(e) => date(e.target.value)}
+            onChange={(e) => setDate(e.target.value)}
             
           />
         </div>

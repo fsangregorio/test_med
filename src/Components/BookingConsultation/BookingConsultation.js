@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import './BookingConsultation.css';
+import './InstantConsultation.css';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import FindDoctorSearchIC from '../InstantConsultation/FindDoctorSearchIC/FindDoctorSearchIC';
-import DoctorCardIC from '../InstantConsultation/DoctorCardIC/DoctorCardIC';
+import FindDoctorSearchIC from './FindDoctorSearchIC/FindDoctorSearchIC.js';
+import DoctorCardIC from './DoctorCardIC/DoctorCardIC.js';
 
-const BookingConsultation = () => {
+const InstantConsultation = () => {
     const [searchParams] = useSearchParams();
     const [doctors, setDoctors] = useState([]);
     const [filteredDoctors, setFilteredDoctors] = useState([]);
@@ -15,13 +15,13 @@ const BookingConsultation = () => {
         .then(res => res.json())
         .then(data => {
             if (searchParams.get('speciality')) {
-                // window.reload()
+                
                 const filtered = data.filter(doctor => doctor.speciality.toLowerCase() === searchParams.get('speciality').toLowerCase());
 
                 setFilteredDoctors(filtered);
                 
                 setIsSearched(true);
-                window.reload()
+                
             } else {
                 setFilteredDoctors([]);
                 setIsSearched(false);
@@ -29,7 +29,7 @@ const BookingConsultation = () => {
             setDoctors(data);
         })
         .catch(err => console.log(err));
-    }
+    }    
     const handleSearch = (searchText) => {
 
         if (searchText === '') {
@@ -52,11 +52,11 @@ const BookingConsultation = () => {
     const navigate = useNavigate();
     useEffect(() => {
         getDoctorsDetails();
-        // const authtoken = sessionStorage.getItem("auth-token");
-        // if (!authtoken) {
-        //     navigate("/login");
-        // }
-    }, [searchParams])
+         const authtoken = sessionStorage.getItem("auth-token");
+         if (!authtoken) {
+             navigate("/login");
+         }
+    }, [searchParams, getDoctorsDetails, navigate])
 
     return (
         <center>
@@ -82,4 +82,4 @@ const BookingConsultation = () => {
     )
 }
 
-export default BookingConsultation
+export default InstantConsultation;

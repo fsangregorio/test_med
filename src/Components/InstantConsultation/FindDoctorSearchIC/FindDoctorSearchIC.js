@@ -46,4 +46,4 @@ const FindDoctorSearchIC = () => {
     )
 }
 
-export default FindDoctorSearchIC
+export default FindDoctorSearchIC;
