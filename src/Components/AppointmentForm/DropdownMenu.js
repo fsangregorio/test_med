@@ -8,10 +8,15 @@ const HourDropdown = () => {
     hours.push(`${hour} ${period}`);
   }
 
-  const [selectedHour, setSelectedHour] = useState(hours[0]);
+  const [selectedHour, setSelectedHour] = useState(() => {
+    const saved = localStorage.getItem('appointment');
+    return saved ? JSON.parse(saved).time : hours[0];
+  });
 
   const handleChange = (event) => {
-    setSelectedHour(event.target.value);
+    const newHour = event.target.value;
+    setSelectedHour(newHour);
+    localStorage.setItem('appointment', JSON.stringify({ time: newHour }));
   };
 
   return (

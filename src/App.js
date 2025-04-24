@@ -17,7 +17,7 @@ import AppointmentForm from './Components/AppointmentForm/AppointmentForm.js';
 import AppointmentFormIC from './Components/InstantConsultation/AppointmentFormIC/AppointmentFormIC';
 import DoctorCard from './Components/DoctorCard/DoctorCard';
 import DoctorCardIC from './Components/InstantConsultation/DoctorCardIC/DoctorCardIC';
-
+import Notification from './Components/Notification/Notification.js';
 
 // Function component for the main App
 function App() {
@@ -29,6 +29,7 @@ function App() {
         <BrowserRouter>
           {/* Display the Navbar component */}
           <Navbar/>
+          <Notification>
 
           {/* Set up the Routes for different pages */}
           <Routes>
@@ -44,12 +45,14 @@ function App() {
             <Route path="/AppointmentForm" element={<AppointmentForm/>}/>
             <Route path="/DoctorCardIC" element={<DoctorCardIC />} /> 
             <Route path="/DoctorCard" element={<DoctorCard />} /> 
+            <Route path="</Notification>" element={<Notification/>}/>
 
 
 
 
             {/* Define individual Route components for different pages */}
           </Routes>
+          </Notification>
         </BrowserRouter>
     </div>
   );
