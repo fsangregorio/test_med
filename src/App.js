@@ -8,6 +8,8 @@ import FindDoctorSearch from './Components/FindDoctorSearch/FindDoctorSearch';
 import Notification from './Components/Notification/Notification';
 import InstantConsultation from './Components/InstantConsultation/InstantConsultation';
 import DoctorBook from './Components/DoctorCard/DoctorBook';
+import GiveReviews from './Components/ReviewForm/GiveReview';
+import ReviewForm from './Components/ReviewForm/ReviewForm';
 
 function App() { 
 
@@ -26,6 +28,7 @@ function App() {
   <Route path='/finddoctor' element={<FindDoctorSearch/>}/>
   <Route path="/search/doctors" element={<DoctorBook/>} />
   <Route path='/InstantConsultation' element={<InstantConsultation/>}/>
+  <Route path="/reviews" element={<ReviewForm/>} />
  
 
 </Routes> 
