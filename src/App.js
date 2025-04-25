@@ -26,11 +26,6 @@ function App() {
   <Route path='/finddoctor' element={<FindDoctorSearch/>}/>
   <Route path="/search/doctors" element={<DoctorBook/>} />
   <Route path='/InstantConsultation' element={<InstantConsultation/>}/>
-
-  {/* <Route path='/login' element={<Login/>}/> */} 
-
-
-
  
 
 </Routes> 
