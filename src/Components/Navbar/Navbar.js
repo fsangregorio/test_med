@@ -30,7 +30,7 @@ const Navbar = () => {
     setIsLoggedIn(false);
     setEmail('');
     setName('');
-    window.location.reload();
+    navigate("/login"); // Redirect to login page instead of reloading the page
   };
 
   const handleDropdown = () => {
@@ -43,7 +43,7 @@ const Navbar = () => {
 
   const reportsPage = () => {
     navigate("/reports");
-  }; 
+  };
 
   useEffect(() => {
     const storedName = sessionStorage.getItem("name");
